@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/ChopCheck/DesignTimeBuild
+/.vs/ChopCheck/v16
+/src/.vs/ChopCheck/config
+/src/.vs/ChopCheck/DesignTimeBuild
+/src/.vs/ChopCheck/v16/Server/sqlite3
+/src/.vs/ChopCheck/v16
+/src/.vs/ChopCheck.Web/DesignTimeBuild
+/src/.vs/ChopCheck.Web/v16
+/src/ChopCheck.Data/obj/Debug/netstandard2.0
+/src/ChopCheck.Data/obj

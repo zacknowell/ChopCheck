@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace ChopCheck.Data.Services
 {
     public partial class ServiceBase<T> : IService<T>
     {
+        private string _conn; 
+
         public T Insert(T Entity)
         {
-            throw new NotImplementedException();
+
+            return Entity;
         }
 
         public void Delete(int Id)

@@ -12,6 +12,7 @@
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
     <AssemblyName>ChopCheck.Web</AssemblyName>
     <RootNamespace>ChopCheck.Web</RootNamespace>
+    <Configurations>Debug;Release;PROD</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

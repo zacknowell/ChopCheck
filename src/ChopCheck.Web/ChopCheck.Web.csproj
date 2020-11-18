@@ -12,13 +12,14 @@
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
     <AssemblyName>ChopCheck.Web</AssemblyName>
     <RootNamespace>ChopCheck.Web</RootNamespace>
-    <Configurations>Debug;Release;PROD</Configurations>
+    <Configurations>Debug;Release;PROD;DEV</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
   </ItemGroup>
 
   <ItemGroup>

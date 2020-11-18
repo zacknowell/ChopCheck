@@ -5,7 +5,10 @@ using ChopCheck.Data.Models;
 
 namespace ChopCheck.Data.Services
 {
-    public class GetShopsService : ServiceBase<Shop>
+    public class ShopsService : ServiceBase
     {
+        public ShopsService() : base("SHOP")
+        {
+        }
     }
 }

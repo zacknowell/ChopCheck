@@ -1,7 +1,6 @@
 ﻿namespace Patterns.Dapper
 {
     using System;
-    using System.ComponentModel.DataAnnotations;
 
     [AttributeUsage(AttributeTargets.Property)]
     public class DapperColumnAttribute : Attribute

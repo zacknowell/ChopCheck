@@ -1,64 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Threading.Tasks;
-using ChopCheck.Data.Dapper;
-using ChopCheck.Data.DapperDAL;
+using ChopCheck.Data.DAL;
+using ChopCheck.Data.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ChopCheck.Data.Services
 {
-    public partial class ServiceBase : IServiceBase
+    public abstract class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : class
     {
-        private readonly string tableName;
+        private readonly ChopCheckContext context;
 
-        private readonly IDapperDAL dapperDAL;
+        private readonly DbSet<TEntity> dbSet;
 
-        private IDapperDAL dapperConsumer;
-
-        public ServiceBase(string tableName)
+        public ServiceBase(ChopCheckContext context)
         {
-            this.tableName = tableName;
-            this.dapperDAL = new DapperDAL.DapperDAL(this.tableName);
+            this.context = context;
+            this.dbSet = this.context.Set<TEntity>();
         }
 
-        public ServiceBase(string tableName, IDapperDAL dapperDAL)
+        public async Task AddAsync(TEntity entity)
         {
-            this.tableName = tableName;
-            this.dapperDAL = dapperDAL;
+            await Task.Run(() => this.dbSet.AddAsync(entity));
         }
 
-        public async Task<IDapperResponse> InsertAsync(IDapperModel Entity)
+        public async Task AddAsync(IEnumerable<TEntity> entity)
         {
-            return await dapperDAL.SendAsync(Entity);
+            await this.dbSet.AddRangeAsync(entity);
         }
 
-        public Task DeleteAsync(int Id)
+        public async Task<TEntity> FindAsync(int id)
         {
-            throw new NotImplementedException();
+            return await this.dbSet.FindAsync(id);
         }
 
-        public Task<IDapperResponse> GetAsync(int Id)
+        public async Task UpdateAsync(TEntity Entity)
         {
-            throw new NotImplementedException();
+            await Task.Run(() => this.context.Update(Entity));
         }
 
-        public Task<IEnumerable<IDapperResponse>> GetAsync(IList<int> Id, IList<string> OrderBy = null)
+        public async Task RemoveAsync(TEntity entity)
         {
-            throw new NotImplementedException();
+            await Task.Run(() => this.dbSet.Remove(entity));
         }
-
-        public Task<IEnumerable<IDapperResponse>> GetAllAsync()
+        public async Task RemoveAsync(int id)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IDapperResponse> UpdateAsync(int Id, IDapperModel Entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IDapperResponse> UpsertAsync(int Id, IDapperModel Entity)
-        {
-            throw new NotImplementedException();
+            await Task.Run(() =>
+            {
+                var entity = this.FindAsync(id).Result;
+                this.dbSet.Remove(entity);
+            });
         }
     }
 }

@@ -5,6 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ChopCheck.Data.Models;
+using Microsoft.EntityFrameworkCore;
+using ChopCheck.Data.DAL;
+using System.Configuration;
+using ChopCheck.Data.Services;
 
 namespace AngularApp
 {
@@ -27,6 +32,8 @@ namespace AngularApp
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddDbContext<ChopCheckContext>(options => options.UseSqlServer(ConfigurationManager.ConnectionStrings["ChopCheckApplication"].ConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

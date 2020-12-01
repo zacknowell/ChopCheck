@@ -16,3 +16,4 @@
 /src/ChopCheck.Data/bin/PROD/netstandard2.0
 /src/ChopCheck.Data/bin
 /src/Patterns.Dapper/obj
+/.vs

@@ -25,7 +25,7 @@ namespace AngularApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -33,7 +33,7 @@ namespace AngularApp
                 configuration.RootPath = "ClientApp/dist";
             });
 
-            services.AddDbContext<ChopCheckContext>(options => options.UseSqlServer(ConfigurationManager.ConnectionStrings["ChopCheckApplication"].ConnectionString));
+            services.AddDbContext<ChopCheckContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ChopCheckApplication")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,12 +53,12 @@ namespace AngularApp
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute(
+            //        name: "default",
+            //        template: "{controller}/{action=Index}/{id?}");
+            //});
 
             app.UseSpa(spa =>
             {

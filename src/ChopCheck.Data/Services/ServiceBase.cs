@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Threading.Tasks;
-using ChopCheck.Data.DAL;
+using ChopCheck.Data.EntityFramework;
 using ChopCheck.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

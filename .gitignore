@@ -17,3 +17,4 @@
 /src/ChopCheck.Data/bin
 /src/Patterns.Dapper/obj
 /.vs
+/.vscode

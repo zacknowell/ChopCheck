@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ChopCheck.Data.Helpers;
-using Patterns.Dapper;
-
 namespace ChopCheck.Data.Models
 {
-    public class Shop
+    public class Branch
     {
         public int Id { get; set; }
 

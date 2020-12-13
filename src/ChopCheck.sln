@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChopCheck.Web", "ChopCheck.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChopCheck.Data", "ChopCheck.Data\ChopCheck.Data.csproj", "{641FC4AD-DB85-47E6-B1A6-7C89E6451030}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patterns.Dapper", "Patterns.Dapper\Patterns.Dapper.csproj", "{B239ADD4-46F5-4F2C-8AA1-D7A1656063E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patterns.Dapper", "Patterns.Dapper\Patterns.Dapper.csproj", "{B239ADD4-46F5-4F2C-8AA1-D7A1656063E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +41,14 @@ Global
 		{B239ADD4-46F5-4F2C-8AA1-D7A1656063E3}.PROD|Any CPU.Build.0 = Debug|Any CPU
 		{B239ADD4-46F5-4F2C-8AA1-D7A1656063E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B239ADD4-46F5-4F2C-8AA1-D7A1656063E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.PROD|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.PROD|Any CPU.Build.0 = Debug|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30C422E-FFB1-42ED-972F-C9D0A4501033}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

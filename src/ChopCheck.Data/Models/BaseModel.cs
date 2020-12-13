@@ -1,6 +1,4 @@
-﻿using ChopCheck.Data.Helpers;
-
-namespace ChopCheck.Data.Models
+﻿namespace ChopCheck.Data.Models
 {
     public abstract class BaseModel : IBaseModel
     {

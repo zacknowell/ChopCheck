@@ -6,11 +6,15 @@
 
     public class ChopCheckContext : DbContext
     {
-        public DbSet<Shop> Shops { get; set; }
+        public ChopCheckContext(DbContextOptions options) : base(options)
+        {
+
+        }
+        public DbSet<Branch> Branches { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Shop>().ToTable("Shop");
+            modelBuilder.Entity<Branch>().ToTable("Branch");
         }
     }
 }

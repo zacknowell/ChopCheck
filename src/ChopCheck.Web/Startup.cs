@@ -7,9 +7,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ChopCheck.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using ChopCheck.Data.DAL;
 using System.Configuration;
 using ChopCheck.Data.Services;
+using ChopCheck.Data.EntityFramework;
 
 namespace AngularApp
 {

@@ -20,6 +20,4 @@ jobs:
     - name: Install dependencies
       run: dotnet restore src/ChopCheck.sln
     - name: Build
-      run: dotnet build --configuration PROD --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet build src/ChopCheck.sln --configuration PROD --no-restore

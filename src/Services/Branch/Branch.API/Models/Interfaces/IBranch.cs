@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Branch.API.Model
+namespace Branch.API.Models
 {
-    public interface IShop
+    public interface IBranch
     {
     }
 }

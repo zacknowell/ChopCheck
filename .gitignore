@@ -2,19 +2,18 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/ChopCheck/DesignTimeBuild
-/.vs/ChopCheck/v16
-/src/.vs/ChopCheck/config
-/src/.vs/ChopCheck/DesignTimeBuild
-/src/.vs/ChopCheck/v16/Server/sqlite3
-/src/.vs/ChopCheck/v16
-/src/.vs/ChopCheck.Web/DesignTimeBuild
-/src/.vs/ChopCheck.Web/v16
-/src/ChopCheck.Data/obj/Debug/netstandard2.0
-/src/ChopCheck.Data/obj
-/src/ChopCheck.Data/bin/Debug/netstandard2.0
-/src/ChopCheck.Data/bin/PROD/netstandard2.0
-/src/ChopCheck.Data/bin
-/src/Patterns.Dapper/obj
-/.vs
-/.vscode
+.vs/
+src/Services/Branch/Branch.API/bin/
+src/Services/Branch/Branch.API/obj/
+src/Services/User/User.API/bin/
+src/Services/User/User.API/obj/
+src/Services/Rating/Rating.API/bin/
+src/Services/Rating/Rating.API/obj/
+src/Services/Queue/Queue.API/bin/
+src/Services/Queue/Queue.API/obj/
+src/Services/Services/Services.API/bin/
+src/Services/Services/Services.API/obj/
+src/Services/Location/Location.API/bin/
+src/Services/Location/Location.API/obj/
+src/Web/ChopCheck.Web/bin/
+src/Web/ChopCheck.Web/obj/

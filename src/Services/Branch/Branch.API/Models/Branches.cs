@@ -1,6 +1,8 @@
-namespace Branch.API.Model
+using Microsoft.EntityFrameworkCore;
+
+namespace Branch.API.Models
 {
-    public class Branch
+    public class Branches
     {
         public int Id { get; set; }
 

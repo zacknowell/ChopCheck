@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularApp": {
+    "ChopCheck": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularApp:build"
+            "browserTarget": "ChopCheck:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "AngularApp:build:production"
+              "browserTarget": "ChopCheck:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AngularApp:build"
+            "browserTarget": "ChopCheck:build"
           }
         },
         "test": {
@@ -99,7 +99,7 @@
         }
       }
     },
-    "AngularApp-e2e": {
+    "ChopCheck-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -108,7 +108,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "AngularApp:serve"
+            "devServerTarget": "ChopCheck:serve"
           }
         },
         "lint": {
@@ -125,7 +125,7 @@
       }
     }
   },
-  "defaultProject": "AngularApp",
+  "defaultProject": "ChopCheck",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",
